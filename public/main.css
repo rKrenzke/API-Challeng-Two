@@ -27,6 +27,7 @@ ul.sol li span{
     padding: 0px 10px;
 }
 
+
 .nav-item a{
     color: #cc9e05;
 }
@@ -64,22 +65,19 @@ ul.sol li span{
 }
 
 #carouselForImages{
-    height: 300px;
+    margin-top: 25px;
 }
 
 #carousel-inner{
     height: 300px;
+    border-radius: 15px;
 }
 
-img {
-    max-width: 400px;
-    max-height: 100%;
-    border-radius: 25px;
-}
 
 #image-body{
     margin: 30px;
 }
+
 
 .card-group{
     border: none;

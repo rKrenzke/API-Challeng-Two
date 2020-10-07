@@ -77,8 +77,8 @@ function createPlanet(json){
     }
     let newPlanet = new Planet(json.englishName, json.mass.massExponent, json.perihelion, json.aphelion, numberOfMoons)
     let planetName = newPlanet.name;
-    getImage(planetName);
     displayPlanet(newPlanet);
+    getImage(planetName); 
 }
   
 function displayPlanet(newPlanet){
@@ -105,6 +105,7 @@ function displayPlanet(newPlanet){
             orbit[0].style.border = 'none';
         }
     results.style.display = '';
+    
 }
 
 function getImage(planetName){
@@ -124,15 +125,25 @@ function displayImage(json){
 
     //Iterate through the first 20 images returned and create a carousel card for each
     let current = json.collection.items;
-    for(let i = 0; i < 20; i++){
+    let activeDiv = document.createElement('div');
+    let activeImg = document.createElement('img');
+    activeDiv.setAttribute('class', 'carousel-item active');
+    activeImg.setAttribute('class', 'd-block w-100');
+    activeImg.src = current[0].links[0].href;
+    activeDiv.appendChild(activeImg);
+    imageBody.appendChild(activeDiv);
+
+    for(let i = 1; i < 20; i++){
         let carouselDiv = document.createElement('div');
         let carouselImg = document.createElement('img');
         carouselImg.setAttribute('class', 'd-block w-100');
         carouselDiv.setAttribute('class', 'carousel-item');
-        carouselImg.src = current[i].links[0].href;
+        carouselImg.src = current[i].links[0].href;    
         carouselDiv.appendChild(carouselImg);
         imageBody.appendChild(carouselDiv);
-    }
+        }
+
+        
     // let displayImg = document.createElement('img');
     // let current = json.collection.items;
     // displayImg.src = current[4].links[0].href;
