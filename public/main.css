@@ -2,6 +2,7 @@ body, html{
     background-color: #0c143c;
     margin: 0;
     padding: 0;
+    font-family: 'Righteous', cursive;
 }
 
 ul.sol {
@@ -11,6 +12,7 @@ ul.sol {
     height: 850px;
     top: 30px;
 }
+
 
 ul.sol li{
     display: block;
@@ -27,6 +29,10 @@ ul.sol li span{
     padding: 0px 10px;
 }
 
+h6{
+    color: antiquewhite;
+    
+}
 
 .nav-item a{
     color: #cc9e05;
@@ -66,13 +72,39 @@ ul.sol li span{
 
 #carouselForImages{
     margin-top: 25px;
+    border-radius: 20px;
+    max-width: 500px;
+    height: auto;
 }
 
 #carousel-inner{
-    height: 300px;
-    border-radius: 15px;
+    border-radius: 20px;
+    max-width: 500px;
+    height: auto;
 }
 
+.carousel-item{
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#newMarsSol{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #cc9e05;
+    color: whitesmoke;
+    text-shadow: 1px 1px grey;
+    margin-top: 15px;
+    letter-spacing: .02em;
+}
+#newMarsSol:hover{
+    background-color: #393b3b;
+    border: 2px inset #cc9e05;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+}
 
 #image-body{
     margin: 30px;
